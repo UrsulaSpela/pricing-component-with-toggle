@@ -12,4 +12,126 @@ body {
 }
 #main {
   width: 1440px;
+  height: 850px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url(images/bg-bottom.svg) left bottom,
+    url(images/bg-top.svg) right top;
+  background-repeat: no-repeat;
+  background-color: hsl(240, 78%, 98%);
+  text-align: center;
+}
+header {
+  margin-bottom: 65px;
+}
+h2 {
+  color: hsl(233, 13%, 49%);
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+#toggle {
+  display: flex;
+  align-items: center;
+}
+.monthly {
+  display: none;
+}
+/*---------------------- SWITCH --------------------------*/
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 30px;
+  margin: 0 20px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 15px;
+  background: linear-gradient(90deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 3px;
+  bottom: 2px;
+  border-radius: 50%;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(19px);
+  -ms-transform: translateX(19px);
+  transform: translateX(19px);
+}
+/*-------------------------------------------------------------*/
+#options {
+  display: flex;
+  align-items: center;
+}
+.side {
+  height: 450px;
+  width: 350px;
+  background: white;
+  padding: 30px;
+}
+.side p {
+  color: hsl(233, 13%, 49%);
+}
+.side h1 {
+  color: hsl(232, 13%, 33%);
+  font-size: 70px;
+}
+.left {
+  border-radius: 10px 0 0 10px;
+}
+.right {
+  border-radius: 0 10px 10px 0;
+}
+span.dollar {
+  font-size: 30px;
+}
+.center {
+  height: 500px;
+  width: 350px;
+  background: linear-gradient(
+    to bottom right,
+    hsl(236, 72%, 79%),
+    hsl(237, 63%, 64%)
+  );
+  border-radius: 10px;
+  color: white;
+  padding: 60px 30px;
+}
+.center h1 {
+  font-size: 70px;
+}
+hr {
+  border: 0.4px solid hsl(234, 14%, 74%);
+}
+button {
+  width: 290px;
+  height: 45px;
+  border-radius: 5px;
+  border: none;
+  text-transform: uppercase;
 }

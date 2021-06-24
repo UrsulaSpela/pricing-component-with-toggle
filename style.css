@@ -2,13 +2,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
 }
 body {
   width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: "Montserrat", sans-serif;
 }
 #main {
   width: 1440px;
@@ -88,17 +88,27 @@ input:checked + .slider:before {
   display: flex;
   align-items: center;
 }
+.options-item h3 {
+  margin-bottom: 20px;
+}
+.options-item p {
+  height: 50px;
+  position: relative;
+  top: 18px;
+}
+.options-item h1 {
+  margin-bottom: 40px;
+}
 .side {
   height: 450px;
   width: 350px;
   background: white;
   padding: 30px;
 }
-.side p {
+.side {
   color: hsl(233, 13%, 49%);
 }
 .side h1 {
-  color: hsl(232, 13%, 33%);
   font-size: 70px;
 }
 .left {
@@ -109,6 +119,8 @@ input:checked + .slider:before {
 }
 span.dollar {
   font-size: 30px;
+  position: relative;
+  top: -15px;
 }
 .center {
   height: 500px;
@@ -120,7 +132,7 @@ span.dollar {
   );
   border-radius: 10px;
   color: white;
-  padding: 60px 30px;
+  padding: 55px 30px;
 }
 .center h1 {
   font-size: 70px;
@@ -134,4 +146,43 @@ button {
   border-radius: 5px;
   border: none;
   text-transform: uppercase;
+  position: relative;
+  top: 25px;
+}
+.side button {
+  color: white;
+  background: linear-gradient(90deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+}
+.center button {
+  background: white;
+  color: hsl(237, 63%, 64%);
+}
+button:hover {
+  background: transparent;
+  border: 0.5px solid hsl(234, 14%, 74%);
+}
+.side button:hover {
+  color: hsl(237, 63%, 64%);
+}
+.center button:hover {
+  color: white;
+}
+/*----- MOBILE VERSION ------*/
+@media only screen and (max-width: 375px) {
+  * {
+    max-width: 375px;
+  }
+  #main {
+    height: 1760px;
+  }
+  #options {
+    flex-direction: column;
+  }
+  .options-item {
+    width: 325px;
+    height: 455px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    padding: 15px;
+  }
 }

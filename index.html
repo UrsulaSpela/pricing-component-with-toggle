@@ -26,8 +26,8 @@
       <div id="toggle">
         <p>Annually</p>
 
-        <label class="switch" onclick="priceToggle()">
-          <input type="checkbox" onclick="priceToggle()">
+        <label class="switch">
+          <input type="checkbox" id="toggleswitch">
           <span class="slider"></span>
         </label>
 
@@ -84,6 +84,23 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://github.com/UrsulaSpela">Ursula Spela</a>.
   </div>
+<script>
 
+var input = document.getElementById('toggleswitch');
+var monthly = document.querySelector('.monthly');
+var annualy = document.querySelector('.annualy');
+
+input.addEventListener('change',function(){
+    if(monthly.style.display === 'none'){
+        monthly.style.display = "block";
+        annualy.style.display = "none";
+    }
+    else{
+        monthly.style.display = "none";
+        annualy.style.display = "block";
+    }
+});
+
+</script>
 </body>
 </html>
